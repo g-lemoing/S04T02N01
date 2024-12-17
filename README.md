@@ -18,6 +18,14 @@ La comprovació del funcionament de l'API es fa gràcies a l'eina Postman.
 1. Clonar el repositorio de Github
 git clone https://github.com/g-lemoing/S04T02N01.git
 2. Abrir el IDE e importar el proyecto desde el repositorio local desde File > Open.
+3. En la aplicación, editar el fichero application.properties para adecuar los valores de conexión a la base de datos:
+spring.datasource.url=jdbc:h2:mem:[your_database]
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.h2.console.enabled=true
+5. Abrir la consola del H2 (http://localhost:8080/h2-console) para comprobar los datos en la misma base
 
 ## Ejecución:
 Localizar la clase Main y ejecutar S04T02N01Application.
